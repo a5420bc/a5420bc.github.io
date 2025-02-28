@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <script defer src="app.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="container">
+            <button class="add-btn">添加一本书籍</button>
+            <form class="form--hidden">
+                <div class="group">
+                    <label for="authror">姓名</label>
+                    <input type="text" class="author" placeholder="请输入作者姓名">
+                </div>
+                <div class="group">
+                    <label for="book-name">书名</label>
+                    <input type="text" class="bookname" id="book-name">
+                </div>
+                <div class="group-btn">
+                    <button class="submit">提交</button>
+                    <button class="close">关闭</button>
+                </div>
+            </form>
+            <div class="books">
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

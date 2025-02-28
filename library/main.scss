@@ -1,0 +1,95 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 2rem;
+  min-height: 100vh;
+  .container {
+    display: grid;
+    max-width: 800px;
+    width: 100%;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    position: relative;
+    .add-btn {
+      cursor: pointer;
+      background-color: green;
+      color: white;
+      border-radius: 20px;
+      position: fixed;
+      left: 2rem;
+      top: 50;
+      transform: translateY(-50%);
+      width: 200px;
+      padding: 1rem 1rem;
+      transition: all ease 0.3s;
+      &:hover {
+        transform: scale(1.1);
+        transform-origin: 50% 0%;
+      }
+    }
+    .form--hidden {
+      opacity: 0;
+      top: -50vh;
+      visibility: hidden;
+    }
+    form {
+      background-color: white;
+      position: absolute;
+      display: grid;
+      place-content: center;
+      grid-template-columns: 1fr;
+      width: 100%;
+      max-width: 600px;
+      gap: 0.5rem;
+      .group {
+        width: 100%;
+        display: flex;
+        gap: 1rem;
+        label,
+        input {
+          width: 100%;
+        }
+        label {
+          flex-basis: 10%;
+        }
+        input {
+          flex-basis: 90%;
+        }
+      }
+      .group-btn {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        .submit,
+        .close {
+          margin-top: 2rem;
+          font-size: 1.5rem;
+          line-height: 1.5;
+          font-weight: 700;
+          padding: 1rem 2rem;
+          justify-self: center;
+        }
+      }
+    }
+    .books {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, clamp(200px, 30%, 300px));
+      gap: 1rem;
+      .card {
+        border: 1px solid black;
+        border-radius: 20px;
+        transition: all 0.3s;
+        &:hover {
+          transform: translateY(-10px);
+        }
+      }
+    }
+  }
+}

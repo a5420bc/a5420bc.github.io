@@ -1,0 +1,95 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 2rem;
+  min-height: 100vh;
+}
+.wrap .container {
+  display: grid;
+  max-width: 800px;
+  width: 100%;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  position: relative;
+}
+.wrap .container .add-btn {
+  cursor: pointer;
+  background-color: green;
+  color: white;
+  border-radius: 20px;
+  position: fixed;
+  left: 2rem;
+  top: 50;
+  transform: translateY(-50%);
+  width: 200px;
+  padding: 1rem 1rem;
+  transition: all ease 0.3s;
+}
+.wrap .container .add-btn:hover {
+  transform: scale(1.1);
+  transform-origin: 50% 0%;
+}
+.wrap .container .form--hidden {
+  opacity: 0;
+  top: -50vh;
+  visibility: hidden;
+}
+.wrap .container form {
+  background-color: white;
+  position: absolute;
+  display: grid;
+  place-content: center;
+  grid-template-columns: 1fr;
+  width: 100%;
+  max-width: 600px;
+  gap: 0.5rem;
+}
+.wrap .container form .group {
+  width: 100%;
+  display: flex;
+  gap: 1rem;
+}
+.wrap .container form .group label,
+.wrap .container form .group input {
+  width: 100%;
+}
+.wrap .container form .group label {
+  flex-basis: 10%;
+}
+.wrap .container form .group input {
+  flex-basis: 90%;
+}
+.wrap .container form .group-btn {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+.wrap .container form .group-btn .submit,
+.wrap .container form .group-btn .close {
+  margin-top: 2rem;
+  font-size: 1.5rem;
+  line-height: 1.5;
+  font-weight: 700;
+  padding: 1rem 2rem;
+  justify-self: center;
+}
+.wrap .container .books {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, clamp(200px, 30%, 300px));
+  gap: 1rem;
+}
+.wrap .container .books .card {
+  border: 1px solid black;
+  border-radius: 20px;
+  transition: all 0.3s;
+}
+.wrap .container .books .card:hover {
+  transform: translateY(-10px);
+}/*# sourceMappingURL=main.css.map */
